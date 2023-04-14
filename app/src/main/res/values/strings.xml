@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Clothing Suggester</string>
+    <string name="hello">HELLO!</string>
+    <string name="humidity">Humidity</string>
+    <string name="uv_index">UV index</string>
+    <string name="wind">Wind</string>
+    <string name="we_recommend_these_for_today_s_weather">We recommend these for today\'s weather</string>
+</resources>
