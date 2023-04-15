@@ -119,25 +119,26 @@
         app:layout_constraintEnd_toEndOf="@id/view_uv_index"/>
 
     <TextView
-        android:id="@+id/text_uv_index"
+        android:id="@+id/text_max_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/uv_index"
-        app:layout_constraintTop_toBottomOf="@id/image_uv_index"
-        app:layout_constraintStart_toStartOf="@id/image_uv_index"
-        app:layout_constraintEnd_toEndOf="@id/image_uv_index"
         android:layout_marginTop="@dimen/spacing_tiny"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/max_temperature"
         android:textColor="@color/white_60"
         android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"/>
+        app:layout_constraintEnd_toEndOf="@id/image_uv_index"
+        app:layout_constraintStart_toStartOf="@id/image_uv_index"
+        app:layout_constraintTop_toBottomOf="@id/image_uv_index" />
 
     <TextView
+        android:id="@+id/text_value_of_max_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Low"
-        app:layout_constraintTop_toBottomOf="@id/text_uv_index"
-        app:layout_constraintStart_toStartOf="@id/text_uv_index"
-        app:layout_constraintEnd_toEndOf="@id/text_uv_index"
+        tools:text="50"
+        app:layout_constraintTop_toBottomOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
         android:layout_marginTop="@dimen/spacing_tiny"
         android:textColor="@color/white_60"
         android:textSize="14sp"
@@ -178,6 +179,7 @@
         android:fontFamily="@font/roboto_medium"/>
 
     <TextView
+        android:id="@+id/text_wind_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/text_wind"
@@ -202,6 +204,7 @@
         android:padding="@dimen/spacing_small"/>
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_id"
         android:layout_width="match_parent"
         android:layout_height="355dp"
         android:layout_marginVertical="@dimen/spacing_medium"

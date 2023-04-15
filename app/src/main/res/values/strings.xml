@@ -5,4 +5,5 @@
     <string name="uv_index">UV index</string>
     <string name="wind">Wind</string>
     <string name="we_recommend_these_for_today_s_weather">We recommend these for today\'s weather</string>
+    <string name="max_temperature">Max Degree</string>
 </resources>
