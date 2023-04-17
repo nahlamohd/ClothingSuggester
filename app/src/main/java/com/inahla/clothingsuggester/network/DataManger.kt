@@ -2,6 +2,7 @@ package com.inahla.clothingsuggester.network
 
 import com.inahla.clothingsuggester.R
 import com.inahla.clothingsuggester.model.DayWeatherType
+import com.inahla.clothingsuggester.model.Interval
 import com.inahla.clothingsuggester.model.Values
 
 class DataManger {
@@ -36,6 +37,11 @@ class DataManger {
             }
         }
     }
+    fun getClothesImageId(dayWeatherType: DayWeatherType, clothesImage: Int) =
+            (getClothesList(dayWeatherType) - clothesImage).random()
+
+
+
 
     fun getDatWeatherType(valves : Values): DayWeatherType{
         return when {
