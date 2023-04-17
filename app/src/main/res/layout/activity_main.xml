@@ -31,7 +31,7 @@
         app:drawableEndCompat="@drawable/ic_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_hello"
-        tools:text="Tanta" />
+        android:text="Tanta, Egypt" />
 
     <TextView
         android:id="@+id/text_temperature"
@@ -87,6 +87,7 @@
         android:fontFamily="@font/roboto_medium"/>
 
     <TextView
+        android:id="@+id/text_humidity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="40 %"
@@ -132,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@id/image_uv_index" />
 
     <TextView
-        android:id="@+id/text_value_of_max_temperature"
+        android:id="@+id/text_max_temperature_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="50"
@@ -179,7 +180,7 @@
         android:fontFamily="@font/roboto_medium"/>
 
     <TextView
-        android:id="@+id/text_wind_speed"
+        android:id="@+id/text_wind_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/text_wind"
@@ -201,15 +202,16 @@
         android:layout_marginTop="@dimen/spacing_medium"
         android:textSize="@dimen/text_large"
         android:textColor="@color/white_87"
-        android:padding="@dimen/spacing_small"/>
+        android:paddingHorizontal="@dimen/spacing_medium"
+        android:paddingVertical="@dimen/spacing_small"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_id"
+        android:id="@+id/image_clothes"
         android:layout_width="match_parent"
         android:layout_height="355dp"
         android:layout_marginVertical="@dimen/spacing_medium"
         android:scaleType="fitXY"
-        android:src="@drawable/summer_6"
+        tools:src="@drawable/summer_6"
         app:shapeAppearance="@style/ImageAppearance"
         app:layout_constraintTop_toBottomOf="@id/text_recommendation"/>
 
