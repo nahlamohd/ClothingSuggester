@@ -2,7 +2,6 @@ package com.inahla.clothingsuggester.network
 
 import com.inahla.clothingsuggester.model.Interval
 import com.inahla.clothingsuggester.model.Values
-import com.inahla.clothingsuggester.util.PrefsUtil
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -21,6 +20,7 @@ class NetworkUtils {
 
         for(i in 0 until intervals.length()) {
             val interval = intervals.getJSONObject(i)
+            val startTime = interval.getString("startTime")
             val values = interval.getJSONObject("values")
             val weatherValues = Values(
                 humidity = values.getString("humidity").toString().toDouble(),
@@ -30,7 +30,7 @@ class NetworkUtils {
             )
             val weatherType = data.getDatWeatherType(weatherValues)
             val clothesImageId = data.getClothesImageId(weatherType)
-            intervalsList.add(Interval(weatherValues, weatherType, clothesImageId))
+            intervalsList.add(Interval(startTime,weatherValues, weatherType, clothesImageId))
 
         }
         return intervalsList

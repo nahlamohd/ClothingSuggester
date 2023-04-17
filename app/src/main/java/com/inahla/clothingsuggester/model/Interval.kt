@@ -4,8 +4,10 @@ import androidx.annotation.DrawableRes
 
 
 class Interval (
+    val startTime: String,
     val values: Values,
     val weatherType: DayWeatherType,
-    @DrawableRes val clothesImageId: Int
+    @DrawableRes var clothesImageId: Int,
+    //@DrawableRes val WeatherImageId: Int
     )
 
