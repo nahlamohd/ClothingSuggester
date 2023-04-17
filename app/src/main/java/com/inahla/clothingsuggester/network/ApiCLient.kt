@@ -11,7 +11,6 @@ import com.inahla.clothingsuggester.util.Constants.FIELDS_VALUES
 import com.inahla.clothingsuggester.util.Constants.HTTPS_SCHEME
 import com.inahla.clothingsuggester.util.Constants.LOCATION
 import com.inahla.clothingsuggester.util.Constants.ONE_DAY_TIME_STEPS
-import com.inahla.clothingsuggester.util.Constants.TANTA_LOCATION
 import com.inahla.clothingsuggester.util.Constants.TIME_LINES
 import com.inahla.clothingsuggester.util.Constants.TIME_STEPS
 import com.inahla.clothingsuggester.util.Constants.UNITS
@@ -19,7 +18,7 @@ import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import java.io.IOException
 
-class ApiClient(private val utils: NetworkUtils) {
+class ApiClient(private val utils: NetworkUtils, latitude: String, longitude: String) {
     var intervals = listOf<Interval>()
 
     private val client: OkHttpClient by lazy {
@@ -33,7 +32,7 @@ class ApiClient(private val utils: NetworkUtils) {
         .host(BASE_URL)
         .addPathSegment("v4")
         .addPathSegment(TIME_LINES)
-        .addQueryParameter(LOCATION, TANTA_LOCATION)
+        .addQueryParameter(LOCATION, "$latitude,$longitude")
         .addQueryParameter(FIELDS, FIELDS_VALUES)
         .addQueryParameter(TIME_STEPS, ONE_DAY_TIME_STEPS)
         .addQueryParameter(UNITS, CELSIUS_UNITS)

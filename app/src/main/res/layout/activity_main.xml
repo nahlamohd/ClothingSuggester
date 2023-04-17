@@ -31,7 +31,7 @@
         app:drawableEndCompat="@drawable/ic_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_hello"
-        android:text="Tanta, Egypt" />
+        tools:text="Tanta, Egypt" />
 
     <TextView
         android:id="@+id/text_temperature"

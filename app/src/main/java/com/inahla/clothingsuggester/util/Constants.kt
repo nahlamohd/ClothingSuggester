@@ -10,8 +10,7 @@ object Constants {
     const val UNITS = "units"
     const val APIKEY = "apikey"
     const val FIELDS_VALUES = "temperature,temperatureMax,humidity,windSpeed"
-    const val ONE_DAY_TIME_STEPS = "1d"
-    const val TANTA_LOCATION = "30.0444,-31.2357"
+    const val ONE_DAY_TIME_STEPS = "1h"
     const val CELSIUS_UNITS = "metric"
 
 
