@@ -44,12 +44,15 @@ class DataManger {
 
     fun getDatWeatherType(valves : WeatherValues): DayWeatherType{
         return when {
-            valves.temperature <= 20.0 -> {
+            valves.temperature <= COLD_DEGREE -> {
                 DayWeatherType.COLD
             }
             else -> {
                 DayWeatherType.HOT
             }
         }
+    }
+    companion object{
+        const val COLD_DEGREE = 20.0
     }
 }
