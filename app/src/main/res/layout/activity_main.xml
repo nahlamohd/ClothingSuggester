@@ -10,24 +10,20 @@
 
     <TextView
         android:id="@+id/text_hello"
+        style="@style/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello"
-        android:textSize="@dimen/text_medium"
-        android:textColor="@color/white_87"
-        android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_city"
+        style="@style/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_medium"
         android:drawablePadding="@dimen/spacing_small"
-        android:fontFamily="@font/roboto_medium"
-        android:textColor="@color/white_87"
-        android:textSize="@dimen/text_medium"
         app:drawableEndCompat="@drawable/ic_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_hello"
@@ -35,23 +31,22 @@
 
     <TextView
         android:id="@+id/text_temperature"
+        style="@style/DegreeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="22"
+        android:layout_marginTop="@dimen/spacing_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_city"
-        android:layout_marginTop="@dimen/spacing_medium"
-        android:textSize="@dimen/text_giant"
-        android:textColor="@color/white_87"
-        android:fontFamily="@font/roboto_medium"/>
+        tools:text="22" />
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/image_cloud"
+        app:layout_constraintBottom_toBottomOf="@id/text_temperature"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_temperature"
-        app:layout_constraintBottom_toBottomOf="@id/text_temperature"/>
+        app:layout_constraintTop_toTopOf="@id/text_temperature" />
 
     <View
         android:id="@+id/view_humidity"
@@ -67,36 +62,33 @@
         android:id="@+id/image_humidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
         android:src="@drawable/ic_humidity"
-        app:layout_constraintTop_toTopOf="@id/view_humidity"
-        app:layout_constraintStart_toStartOf="@id/view_humidity"
         app:layout_constraintEnd_toEndOf="@id/view_humidity"
-        android:layout_marginTop="@dimen/spacing_small" />
+        app:layout_constraintStart_toStartOf="@id/view_humidity"
+        app:layout_constraintTop_toTopOf="@id/view_humidity" />
 
     <TextView
         android:id="@+id/text_humidity"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/humidity"
-        app:layout_constraintTop_toBottomOf="@id/image_humidity"
-        app:layout_constraintStart_toStartOf="@id/view_humidity"
-        app:layout_constraintEnd_toEndOf="@id/view_humidity"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:textColor="@color/white_60"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:text="@string/humidity"
+        app:layout_constraintEnd_toEndOf="@id/view_humidity"
+        app:layout_constraintStart_toStartOf="@id/view_humidity"
+        app:layout_constraintTop_toBottomOf="@id/image_humidity" />
 
     <TextView
         android:id="@+id/text_humidity_value"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="40 %"
-        app:layout_constraintTop_toBottomOf="@id/text_humidity"
-        app:layout_constraintStart_toStartOf="@id/text_humidity"
-        app:layout_constraintEnd_toEndOf="@id/text_humidity"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white_60" />
+        app:layout_constraintEnd_toEndOf="@id/text_humidity"
+        app:layout_constraintStart_toStartOf="@id/text_humidity"
+        app:layout_constraintTop_toBottomOf="@id/text_humidity"
+        tools:text="40 %" />
 
     <View
         android:id="@+id/view_uv_index"
@@ -113,37 +105,33 @@
         android:id="@+id/image_uv_index"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_uvindex"
         android:layout_marginTop="@dimen/spacing_small"
+        android:src="@drawable/ic_uvindex"
+        app:layout_constraintEnd_toEndOf="@id/view_uv_index"
         app:layout_constraintStart_toStartOf="@id/view_uv_index"
-        app:layout_constraintTop_toTopOf="@id/view_uv_index"
-        app:layout_constraintEnd_toEndOf="@id/view_uv_index"/>
+        app:layout_constraintTop_toTopOf="@id/view_uv_index" />
 
     <TextView
         android:id="@+id/text_max_temperature"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:fontFamily="@font/roboto_medium"
         android:text="@string/max_temperature"
-        android:textColor="@color/white_60"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/image_uv_index"
         app:layout_constraintStart_toStartOf="@id/image_uv_index"
         app:layout_constraintTop_toBottomOf="@id/image_uv_index" />
 
     <TextView
         android:id="@+id/text_max_temperature_value"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="50"
-        app:layout_constraintTop_toBottomOf="@id/text_max_temperature"
-        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
-        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:textColor="@color/white_60"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"/>
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintTop_toBottomOf="@id/text_max_temperature"
+        tools:text="50" />
 
     <View
         android:id="@+id/view_wind"
@@ -160,50 +148,45 @@
         android:id="@+id/image_wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
         android:src="@drawable/ic_wind"
-        app:layout_constraintTop_toTopOf="@id/view_wind"
-        app:layout_constraintStart_toStartOf="@id/view_wind"
         app:layout_constraintEnd_toEndOf="@id/view_wind"
-        android:layout_marginTop="@dimen/spacing_small"/>
+        app:layout_constraintStart_toStartOf="@id/view_wind"
+        app:layout_constraintTop_toTopOf="@id/view_wind" />
 
     <TextView
         android:id="@+id/text_wind"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/image_wind"
-        app:layout_constraintEnd_toEndOf="@id/image_wind"
-        app:layout_constraintTop_toBottomOf="@id/image_wind"
-        android:text="@string/wind"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:textColor="@color/white_60"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:text="@string/wind"
+        app:layout_constraintEnd_toEndOf="@id/image_wind"
+        app:layout_constraintStart_toStartOf="@id/image_wind"
+        app:layout_constraintTop_toBottomOf="@id/image_wind" />
 
     <TextView
         android:id="@+id/text_wind_value"
+        style="@style/SecondaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/text_wind"
-        app:layout_constraintEnd_toEndOf="@id/text_wind"
-        app:layout_constraintTop_toBottomOf="@id/text_wind"
-        tools:text="16km/h"
         android:layout_marginTop="@dimen/spacing_tiny"
-        android:textColor="@color/white_60"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"/>
+        app:layout_constraintEnd_toEndOf="@id/text_wind"
+        app:layout_constraintStart_toStartOf="@id/text_wind"
+        app:layout_constraintTop_toBottomOf="@id/text_wind"
+        tools:text="16km/h" />
 
     <TextView
         android:id="@+id/text_recommendation"
+        style="@style/RecommendationText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/view_uv_index"
-        android:text="@string/we_recommend_these_for_today_s_weather"
-        android:background="@drawable/shape_recommendation"
         android:layout_marginTop="@dimen/spacing_medium"
-        android:textSize="@dimen/text_large"
-        android:textColor="@color/white_87"
+        android:background="@drawable/shape_recommendation"
         android:paddingHorizontal="@dimen/spacing_medium"
-        android:paddingVertical="@dimen/spacing_small"/>
+        android:paddingVertical="@dimen/spacing_small"
+        android:text="@string/we_recommend_these_for_today_s_weather"
+        app:layout_constraintTop_toBottomOf="@id/view_uv_index" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_clothes"
@@ -211,8 +194,8 @@
         android:layout_height="355dp"
         android:layout_marginVertical="@dimen/spacing_medium"
         android:scaleType="fitXY"
-        tools:src="@drawable/summer_6"
+        app:layout_constraintTop_toBottomOf="@id/text_recommendation"
         app:shapeAppearance="@style/ImageAppearance"
-        app:layout_constraintTop_toBottomOf="@id/text_recommendation"/>
+        tools:src="@drawable/summer_6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

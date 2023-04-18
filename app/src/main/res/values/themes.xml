@@ -10,7 +10,7 @@
         <item name="colorSecondaryVariant">@color/blue_100</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorSecondaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -18,4 +18,26 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/radius_medium</item>
     </style>
+    <style name="TitleText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white_87</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="RecommendationText">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/white_87</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="DegreeText">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">@color/white_87</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="SecondaryTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_60</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
 </resources>
