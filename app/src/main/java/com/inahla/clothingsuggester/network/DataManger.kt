@@ -2,8 +2,7 @@ package com.inahla.clothingsuggester.network
 
 import com.inahla.clothingsuggester.R
 import com.inahla.clothingsuggester.model.DayWeatherType
-import com.inahla.clothingsuggester.model.Interval
-import com.inahla.clothingsuggester.model.Values
+import com.inahla.clothingsuggester.model.WeatherValues
 
 class DataManger {
 
@@ -43,7 +42,7 @@ class DataManger {
 
 
 
-    fun getDatWeatherType(valves : Values): DayWeatherType{
+    fun getDatWeatherType(valves : WeatherValues): DayWeatherType{
         return when {
             valves.temperature <= 20.0 -> {
                 DayWeatherType.COLD

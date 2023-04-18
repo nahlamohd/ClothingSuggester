@@ -1,13 +1,16 @@
 package com.inahla.clothingsuggester.model
 
 import androidx.annotation.DrawableRes
-
-
-class Interval (
+data class Interval (
     val startTime: String,
-    val values: Values,
+    val values: WeatherValues,
     val weatherType: DayWeatherType,
     @DrawableRes var clothesImageId: Int,
-    //@DrawableRes val WeatherImageId: Int
     )
+data class WeatherValues(
+    val humidity: Double,
+    val temperature: Double,
+    val temperatureMax: Double,
+    val windSpeed: Double
+)
 

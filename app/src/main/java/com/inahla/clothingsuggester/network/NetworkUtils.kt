@@ -1,7 +1,7 @@
 package com.inahla.clothingsuggester.network
 
 import com.inahla.clothingsuggester.model.Interval
-import com.inahla.clothingsuggester.model.Values
+import com.inahla.clothingsuggester.model.WeatherValues
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -22,7 +22,7 @@ class NetworkUtils {
             val interval = intervals.getJSONObject(i)
             val startTime = interval.getString("startTime")
             val values = interval.getJSONObject("values")
-            val weatherValues = Values(
+            val weatherValues = WeatherValues(
                 humidity = values.getString("humidity").toString().toDouble(),
                 temperature = values.getString("temperature").toString().toDouble(),
                 temperatureMax = values.getString("temperatureMax").toString().toDouble(),

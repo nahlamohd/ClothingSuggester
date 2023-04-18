@@ -12,6 +12,7 @@ object Constants {
     const val FIELDS_VALUES = "temperature,temperatureMax,humidity,windSpeed"
     const val ONE_DAY_TIME_STEPS = "1h"
     const val CELSIUS_UNITS = "metric"
+    const val API_KEY = "GeQ9oLtdaR1l3N3irTjLBnvBOd6Vw083"
 
 
 

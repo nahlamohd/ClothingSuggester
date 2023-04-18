@@ -2,8 +2,8 @@ package com.inahla.clothingsuggester.network
 
 import android.util.Log
 import com.inahla.clothingsuggester.model.Interval
-import com.inahla.clothingsuggester.util.Constants
 import com.inahla.clothingsuggester.util.Constants.APIKEY
+import com.inahla.clothingsuggester.util.Constants.API_KEY
 import com.inahla.clothingsuggester.util.Constants.BASE_URL
 import com.inahla.clothingsuggester.util.Constants.CELSIUS_UNITS
 import com.inahla.clothingsuggester.util.Constants.FIELDS
@@ -36,7 +36,7 @@ class ApiClient(private val utils: NetworkUtils, latitude: String, longitude: St
         .addQueryParameter(FIELDS, FIELDS_VALUES)
         .addQueryParameter(TIME_STEPS, ONE_DAY_TIME_STEPS)
         .addQueryParameter(UNITS, CELSIUS_UNITS)
-        .addQueryParameter(APIKEY, "GeQ9oLtdaR1l3N3irTjLBnvBOd6Vw083")
+        .addQueryParameter(APIKEY, API_KEY)
         .build()
 
 
@@ -45,7 +45,6 @@ class ApiClient(private val utils: NetworkUtils, latitude: String, longitude: St
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 callback(null, e.message)
-                Log.i("NAHLA", "fail ${e.message}")
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -53,8 +52,6 @@ class ApiClient(private val utils: NetworkUtils, latitude: String, longitude: St
                     val jsonArray = utils.getIntervalsJsonArrayFromJson(jsonString!!)
                     intervals = utils.parseIntervals(jsonArray)
                     callback(intervals, null)
-
-                    Log.i("NAHLA", intervals.toString())
                 }
             }
 
